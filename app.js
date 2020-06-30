@@ -5,10 +5,11 @@ methodOverride= require("method-override"),
 mongoose = require("mongoose");
 bodyParser= require("body-parser");
 var bodyParser= require("body-parser");
-
+  const url = process.env.DB_URL;
 //app.use(require('connect').bodyParser());
  //mongoose.set('useNewUrlParser', true);
-mongoose.connect("mongodb+srv://collegetime:Password@collegetime-bm1uh.gcp.mongodb.net/blog?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true });
+//mongoose.connect("mongodb+srv://collegetime:Password@collegetime-bm1uh.gcp.mongodb.net/blog?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(url,{ useNewUrlParser: true, useUnifiedTopology: true });
 app.set("view engine","ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
