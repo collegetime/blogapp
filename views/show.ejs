@@ -1,0 +1,30 @@
+<%- include("partials/header") %>
+<div class ="ui main text container segment justify aligned">
+	<div class =" ui huge header">
+		<%= blog.title.toUpperCase() %>
+	</div>
+	<h4><%=blog.date.toDateString() %></h4>
+	
+		<div class="item">
+		<img class="ui centered rounded image" src="<%=blog.image%>" >
+	</div>
+	
+ 		<div class="content">
+		<p> <%=blog.body%></p>
+
+		
+	</div>
+	
+	<a href="/blogs/<%=blog._id%>/edit" class="ui orange basic button">Update Blog</a>
+            <form style="display: inline" method="POST" action="/blogs/<%=blog._id%>?_method=DELETE">
+                <button class="ui red basic button" type="submit">Delete Blog</button>
+            </form>
+
+</div>
+
+	 
+
+
+
+
+<%- include("partials/footer") %>

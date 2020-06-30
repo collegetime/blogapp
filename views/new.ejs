@@ -1,0 +1,21 @@
+<%- include("partials/header") %>
+			<form action= "/blogs " method="POST" class="ui form ui raised very padded text container segment">
+				  <div class="field">
+						<label>Title</label>
+						<input type="text" name="blog[title]" placeholder="First Name">
+				  </div>
+				  <div class="field">
+						<label>Image URL</label>
+						<input type="text" name="blog[image]" placeholder="Last Name">
+				  </div>
+				  <div class="field">
+						<div class="field">
+							<label>Text</label>
+							<textarea name="blog[body]" required="required"></textarea>
+						</div>
+				  </div>
+				
+			  <button class="ui button" type="submit">Submit</button>
+			</form>
+
+<%- include("partials/footer") %>
